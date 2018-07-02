@@ -58,7 +58,9 @@ arguments:
     valueFrom: PrintReads
 requirements:
   - class: InlineJavascriptRequirement
+'sbg:license': ''
+'sbg:toolAuthor': ''
 'sbg:toolkit': GATK
 'sbg:toolkitVersion': PrintReads
-'sbg:toolAuthor': Tilman Schaefers
-'sbg:license': BSD-2.0
+'sbg:wrapperAuthor': Tilman Schaefers
+'sbg:wrapperLicense': MIT

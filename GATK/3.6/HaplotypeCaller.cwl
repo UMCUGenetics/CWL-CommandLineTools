@@ -404,9 +404,9 @@ arguments:
     valueFrom: HaplotypeCaller
 requirements:
   - class: InlineJavascriptRequirement
+'sbg:license': ''
+'sbg:toolAuthor': ''
 'sbg:toolkit': GATK
-'sbg:wrapperAuthor': Tilman Schaefers
-'sbg:wrapperLicense': Apache 2.0
-'sbg:license': Apache 2.0
-'sbg:toolAuthor': 'Farah Zaib Khan, Sehrish Kanawal'
 'sbg:toolkitVersion': HaplotypeCaller
+'sbg:wrapperAuthor': 'Farah Zaib Khan, Sehrish Kanawal'
+'sbg:wrapperLicense': Apache 2.0

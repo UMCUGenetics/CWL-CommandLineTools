@@ -114,9 +114,9 @@ arguments:
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
-'sbg:license': Apache 2.0
-'sbg:toolAuthor': Tilman Schaefers
+'sbg:license': ''
+'sbg:toolAuthor': ''
 'sbg:toolkit': Picard
 'sbg:toolkitVersion': AddOrReplaceReadGroups
-'sbg:wrapperAuthor': ''
+'sbg:wrapperAuthor': TIlman Schaefers
 'sbg:wrapperLicense': MIT

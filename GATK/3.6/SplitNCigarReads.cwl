@@ -64,9 +64,9 @@ arguments:
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
-'sbg:license': Apache 2.0
-'sbg:toolAuthor': Tilman Schaefers
+'sbg:license': ''
+'sbg:toolAuthor': ''
 'sbg:toolkit': GATK
 'sbg:toolkitVersion': SplitNCigarReads
-'sbg:wrapperAuthor': ''
-'sbg:wrapperLicense': ''
+'sbg:wrapperAuthor': Tilman Schaefers
+'sbg:wrapperLicense': MIT

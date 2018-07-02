@@ -38,9 +38,9 @@ arguments:
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
-'sbg:license': Apache 2.0
-'sbg:toolAuthor': Tilman Schaefers
+'sbg:license': ''
+'sbg:toolAuthor': ''
 'sbg:toolkit': Sambamba
-'sbg:wrapperAuthor': ''
-'sbg:wrapperLicense': ''
 'sbg:toolkitVersion': view
+'sbg:wrapperAuthor': TIlman Schaefers
+'sbg:wrapperLicense': MIT
