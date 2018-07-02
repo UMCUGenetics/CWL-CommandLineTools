@@ -17,7 +17,7 @@ We invite anybody to contribute to the UMCU Genetics CWL CommandLineTools reposi
 The pull request will be reviewed and included as fast as possible. 
 
 ### Contributing guidelines
-- Use the tool / version / subcommand folder structure of this repository. 
+- Use the `tool/version/subtool` folder structure of this repository. 
 - Use CamelCase for tool names
 - Use the original tool version numbering
 
