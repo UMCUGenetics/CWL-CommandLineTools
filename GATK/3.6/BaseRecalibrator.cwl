@@ -199,6 +199,11 @@ inputs:
     inputBinding:
       position: 26
       prefix: '-nct'
+  - id: BQSR
+    type: File?
+    inputBinding:
+      position: 29
+      prefix: '-BQSR'
 outputs:
   - id: output_baseRecalibrator
     type: File
