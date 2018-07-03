@@ -45,11 +45,21 @@ inputs:
     inputBinding:
       position: 6
       prefix: '-BQSR'
+  - id: csv
+    type: string?
+    inputBinding:
+      position: 5
+      prefix: '-csv'
 outputs:
-  - id: output
+  - id: output_pdf
     type: File?
     outputBinding:
       glob: $(inputs.plots)
+    secondaryFiles: []
+  - id: output_csv
+    type: File?
+    outputBinding:
+      glob: $(inputs.csv)
 label: GATK-AnalyzeCovariats
 arguments:
   - position: 2
@@ -59,3 +69,5 @@ arguments:
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
+'sbg:wrapperAuthor': Tilman Schaefers
+'sbg:wrapperLicense': MIT
