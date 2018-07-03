@@ -36,6 +36,8 @@ inputs:
     type: File?
     inputBinding:
       position: 6
+      prefix: '-BQSR'
+      shellQuote: false
 outputs:
   - id: bam_out
     type: File
