@@ -14,8 +14,8 @@ inputs:
       position: 0
       prefix: '-p'
     doc: Show progress
-  - 'sbg:toolDefaultValue': '1'
-    'sbg:altPrefix': '--nthreads'
+  - 'sbg:altPrefix': '--nthreads'
+    'sbg:toolDefaultValue': '1'
     id: threads
     type: int?
     inputBinding:
@@ -26,17 +26,19 @@ inputs:
     type: File
     inputBinding:
       position: 2
+      valueFrom: $(self.path)
     doc: input bam file
     'sbg:fileTypes': .bam
-  - id: out_bai
-    type: string
+  - id: index
+    type: File?
     inputBinding:
       position: 3
+      valueFrom: $(inputs.in_bam.basename + '.bai')
 outputs:
   - id: output
     type: File
     outputBinding:
-      glob: $(inputs.out_bai)
+      glob: $(inputs.index)
 doc: sambamba index
 label: sambamba-index
 requirements:

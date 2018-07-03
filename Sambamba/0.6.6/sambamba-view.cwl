@@ -15,10 +15,11 @@ inputs:
   - id: out_bam_name
     type: string?
     inputBinding:
-      position: 5
+      position: 0
       prefix: '-o'
-      shellQuote: false
-  - id: format
+      valueFrom: $(inputs.input_sam.nameroot + '.bam')
+  - 'sbg:toolDefaultValue': bam
+    id: format
     type: string
     inputBinding:
       position: 2

@@ -24,14 +24,10 @@ inputs:
     type: File
     inputBinding:
       position: 2
-  - id: prefix
-    type: string
-    inputBinding:
-      position: 3
 outputs:
   - id: flagstats
     type: stdout
-stdout: $(inputs.prefix + '.flagstat')
+stdout: $(inputs.bam_in.nameroot + '.flagstat')
 requirements:
   - class: InlineJavascriptRequirement
 'sbg:wrapperAuthor': Tilman Schaefers

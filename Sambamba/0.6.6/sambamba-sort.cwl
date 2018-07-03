@@ -12,10 +12,11 @@ inputs:
     inputBinding:
       position: 0
   - id: out_name
-    type: string
+    type: string?
     inputBinding:
       position: 1
       prefix: '--out'
+      valueFrom: $(inputs.input.nameroot + '.sorted.bam')
 outputs:
   - id: output
     type: File?
