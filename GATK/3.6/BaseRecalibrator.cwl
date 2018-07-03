@@ -21,10 +21,11 @@ inputs:
       perhaps better for whole genome call sets
   - id: covariate
     type:
-      type: array
-      items: string
-      inputBinding:
-        prefix: '--covariate'
+      - 'null'
+      - type: array
+        items: string
+        inputBinding:
+          prefix: '--covariate'
     inputBinding:
       position: 25
     doc: >-
@@ -219,5 +220,5 @@ arguments:
     valueFrom: BaseRecalibrator
 requirements:
   - class: InlineJavascriptRequirement
-'sbg:toolAuthor': ''
 'sbg:license': ''
+'sbg:toolAuthor': ''
