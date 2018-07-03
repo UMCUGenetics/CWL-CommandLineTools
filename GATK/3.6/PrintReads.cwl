@@ -9,43 +9,35 @@ inputs:
   - id: Reference
     type: File
     inputBinding:
-      position: 3
+      position: 5
       prefix: '-R'
   - id: INPUT
     type: File
     inputBinding:
-      position: 4
+      position: 3
       prefix: '-I'
   - id: output
     type: string
     inputBinding:
-      position: 5
+      position: 4
       prefix: '-o'
-  - id: rf
-    type: string
-    inputBinding:
-      position: 6
-      prefix: '-rf'
-  - id: rmqf
-    type: int
-    inputBinding:
-      position: 7
-      prefix: '-RMQF'
-  - id: RMQT
-    type: int
-    inputBinding:
-      position: 8
-      prefix: '-RMQT'
   - id: java_args
     type: string
     inputBinding:
-      position: -7
+      position: 0
       prefix: ''
+      shellQuote: false
   - id: gatk_jar
     type: File
     inputBinding:
-      position: 0
+      position: 1
       prefix: '-jar'
+  - id: BQSR
+    type: File?
+    inputBinding:
+      position: 6
+      prefix: '-BQSR'
+      shellQuote: false
 outputs:
   - id: bam_out
     type: File
@@ -57,6 +49,7 @@ arguments:
     prefix: '-T'
     valueFrom: PrintReads
 requirements:
+  - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement
 'sbg:license': ''
 'sbg:toolAuthor': ''

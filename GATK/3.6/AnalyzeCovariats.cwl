@@ -55,7 +55,6 @@ outputs:
     type: File?
     outputBinding:
       glob: $(inputs.plots)
-    secondaryFiles: []
   - id: output_csv
     type: File?
     outputBinding:
@@ -68,6 +67,8 @@ arguments:
     valueFrom: AnalyzeCovariates
 requirements:
   - class: ShellCommandRequirement
+  - class: ResourceRequirement
+    coresMin: 1
   - class: InlineJavascriptRequirement
 'sbg:wrapperAuthor': Tilman Schaefers
 'sbg:wrapperLicense': MIT
