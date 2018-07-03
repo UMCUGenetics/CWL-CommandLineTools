@@ -27,6 +27,5 @@ outputs:
             glob: '*_fastqc.html'
 
 s:author:
-    - class: s:Person
     s:name: Robert Ernst
 s:license: https://github.com/UMCUGenetics/CWL-CommandLineTools/blob/master/LICENSE
