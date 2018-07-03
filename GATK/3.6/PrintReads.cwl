@@ -38,11 +38,6 @@ inputs:
       position: 6
       prefix: '-BQSR'
       shellQuote: false
-  - id: OBI
-    type: boolean?
-    inputBinding:
-      position: 7
-      prefix: '-OBI'
 outputs:
   - id: bam_out
     type: File
