@@ -1,4 +1,3 @@
-out_sam_filename:
 idxbase:
     class: File
     path:
