@@ -26,7 +26,7 @@ inputs:
         type: string
         inputBinding:
             position: 1
-            prefix: --out
+            prefix: --output-filename
 
     format:
         type: string?
@@ -39,7 +39,3 @@ outputs:
         type: File
         outputBinding:
             glob: $(inputs.output_filename)
-
-s:author:
-    s:name: Robert Ernst
-s:license: https://github.com/UMCUGenetics/CWL-CommandLineTools/blob/master/LICENSE

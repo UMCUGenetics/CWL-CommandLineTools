@@ -55,7 +55,3 @@ outputs:
   out_sam:
     type: stdout
     streamable: true
-
-s:author:
-    s:name: Robert Ernst
-s:license: https://github.com/UMCUGenetics/CWL-CommandLineTools/blob/master/LICENSE
