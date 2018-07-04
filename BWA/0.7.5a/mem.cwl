@@ -3,14 +3,14 @@ class: CommandLineTool
 
 label: bwa mem, map fastq file to reference genome.
 
-baseCommand: bwa mem
-stdout: $(inputs.out_sam)
+baseCommand: [bwa, mem]
+stdout: $(inputs.out_sam_filename)
 
 arguments:
     - {prefix: "-t", valueFrom: $(runtime.cores)}
 
 inputs:
-    out_sam: string
+    out_sam_filename: string
 
     idxbase:
         type: File
@@ -23,7 +23,7 @@ inputs:
             - .pac
             - .sa
 
-    in1_fastq
+    in1_fastq:
         type: File
         inputBinding:
             position: 2
