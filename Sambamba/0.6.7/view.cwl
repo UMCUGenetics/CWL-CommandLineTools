@@ -29,8 +29,9 @@ inputs:
             prefix: --output-filename
 
     output_format:
-        type: enum?
-        symbols: [sam, bam, cram, json]
+        type:
+            type: enum
+            symbols: [sam, bam, cram, json]
         inputBinding:
             position: 1
             prefix: --format
