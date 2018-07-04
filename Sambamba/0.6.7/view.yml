@@ -1,6 +1,6 @@
 {
     "input_sam": {
       "class": "File",
-      "path":
+      "path": "/hpc/tmp/cwl/datafiles/na12878_wgs_brcagenes.sam"
     }
 }
