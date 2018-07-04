@@ -4,7 +4,6 @@ cwlVersion: v1.0
 label: sambamba view, tool for extracting information from SAM/BAM files.
 
 baseCommand: [sambamba, view]
-#sambamba view -t $opt{MAPPING_THREADS} --format=bam -S -o $coreName.bam.tmp
 
 arguments:
     - {prefix: '--nthreads', valueFrom: $(runtime.cores)}
