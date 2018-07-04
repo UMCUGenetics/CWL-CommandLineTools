@@ -3,4 +3,4 @@ input:
     path:
 sam-input: true
 output_filename: .bam
-format: bam
+output_format: bam

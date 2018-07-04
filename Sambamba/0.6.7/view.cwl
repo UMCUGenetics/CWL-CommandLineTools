@@ -28,7 +28,7 @@ inputs:
             position: 1
             prefix: --output-filename
 
-    format:
+    output_format:
         type: string?
         inputBinding:
             position: 1
