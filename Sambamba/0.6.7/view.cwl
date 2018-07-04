@@ -1,40 +1,45 @@
 class: CommandLineTool
 cwlVersion: v1.0
 
-id: view
-baseCommand:
-   sambamba
-   view
-inputs:
-  input_sam:
-    type: File
-    inputBinding:
-      position: 3
-      shellQuote: false
-  output_bam_name:
-    type: string?
-    inputBinding:
-      position: 0
-      prefix: '-o'
-      valueFrom: $(inputs.input_sam.nameroot + '.bam')
-    default: bam
-  format:
-    type: string
-    inputBinding:
-      position: 2
-      prefix: '--format'
-      shellQuote: false
-outputs:
-  output_bam_file:
-    type: File
-    outputBinding:
-      glob: $(inputs.output_bam_name)
-doc: CWL implementation of Sambamba view subcommand
-label: sambamba view
+label: sambamba view, tool for extracting information from SAM/BAM files.
+
+baseCommand: [sambamba, view]
+#sambamba view -t $opt{MAPPING_THREADS} --format=bam -S -o $coreName.bam.tmp
+
 arguments:
-  - position: 1
-    prefix: ''
-    valueFrom: '-S'
-requirements:
-  - class: ShellCommandRequirement
-  - class: InlineJavascriptRequirement
+    - {prefix: '--nthreads', valueFrom: $(runtime.cores)}
+
+inputs:
+    input:
+        type: File
+        inputBinding:
+            position: 2
+        doc: input.bam or input.sam
+
+    sam-input:
+        type: boolean
+        inputBinding:
+            position: 1
+            prefix: --sam-input
+
+    output_filename:
+        type: string
+        inputBinding:
+            position: 1
+            prefix: --out
+
+    format:
+        type: string?
+        inputBinding:
+            position: 1
+            prefix: --format
+
+outputs:
+    output:
+        type: File
+        outputBinding:
+            glob: $(inputs.output_filename)
+
+s:author:
+    s:name: Robert Ernst
+s:license: https://github.com/UMCUGenetics/CWL-CommandLineTools/blob/master/LICENSE

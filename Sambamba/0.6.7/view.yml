@@ -1,6 +1,4 @@
-{
-    "input_sam": {
-      "class": "File",
-      "path": "/hpc/tmp/cwl/datafiles/na12878_wgs_brcagenes.sam"
-    }
-}
+input:
+sam-input: true
+output_filename: .bam
+format: bam
