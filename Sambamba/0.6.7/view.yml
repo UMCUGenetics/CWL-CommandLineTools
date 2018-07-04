@@ -2,5 +2,4 @@ input:
     class: File
     path:
 sam-input: true
-output_filename: .bam
 output_format: bam

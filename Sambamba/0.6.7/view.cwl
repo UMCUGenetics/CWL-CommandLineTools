@@ -4,6 +4,7 @@ cwlVersion: v1.0
 label: sambamba view, tool for extracting information from SAM/BAM files.
 
 baseCommand: [sambamba, view]
+stdout: $(inputs.input.nameroot).$(inputs.output_format)
 
 arguments:
     - {prefix: '--nthreads', valueFrom: $(runtime.cores)}
@@ -22,12 +23,6 @@ inputs:
             position: 1
             prefix: --sam-input
 
-    output_filename:
-        type: string
-        inputBinding:
-            position: 1
-            prefix: --output-filename
-
     output_format:
         type:
             type: enum
@@ -38,6 +33,5 @@ inputs:
 
 outputs:
     output:
-        type: File
-        outputBinding:
-            glob: $(inputs.output_filename)
+        type: stdout
+        streamable: true

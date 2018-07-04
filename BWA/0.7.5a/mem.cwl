@@ -50,6 +50,6 @@ inputs:
         doc: Mark shorter split hits as secondary (for Picard/GATK compatibility)
 
 outputs:
-  out_sam:
-    type: stdout
-    streamable: true
+    out_sam:
+        type: stdout
+        streamable: true
