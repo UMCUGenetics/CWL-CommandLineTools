@@ -1,4 +1,6 @@
 input:
+    class: File
+    path:
 sam-input: true
 output_filename: .bam
 format: bam
