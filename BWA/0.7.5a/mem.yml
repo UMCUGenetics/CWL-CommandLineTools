@@ -1,0 +1,13 @@
+out_sam:
+idxbase:
+    class: File
+    path:
+in1_fastq:
+    class: File
+    path:
+in2_fastq:
+    class: File
+    path:
+read_group:
+c: 100
+m: true

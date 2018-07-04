@@ -1,7 +1,3 @@
-{
-    "fastq_file": {
-        "class": "File",
-        "path": "/hpc/tmp/cwl/datafiles/na12878_wgs_brcagenes-1.fastq"
-    }
-
-}
+fastq_file:
+    class: File
+    path: /hpc/tmp/cwl/datafiles/na12878_wgs_brcagenes-1.fastq
