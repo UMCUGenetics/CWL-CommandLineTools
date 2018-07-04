@@ -12,6 +12,7 @@ arguments:
 inputs:
     input:
         type: File
+        streamable: true
         inputBinding:
             position: 2
         doc: input.bam or input.sam
