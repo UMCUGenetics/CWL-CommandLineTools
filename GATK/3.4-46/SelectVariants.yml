@@ -4,9 +4,8 @@ gatk_jar:
 reference_sequence:
     class: File
     path:
-input:
+variant:
     class: File
     path:
-targetIntervals:
-    class: File
-    path: <from RealignerTargetCreator>
+out: .vcf
+selectType: [INDEL, SNP, MIXED, MNP, SYMBOLIC, NO_VARIATION]

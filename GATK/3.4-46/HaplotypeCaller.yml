@@ -7,6 +7,4 @@ reference_sequence:
 input:
     class: File
     path:
-targetIntervals:
-    class: File
-    path: <from RealignerTargetCreator>
+out: .vcf

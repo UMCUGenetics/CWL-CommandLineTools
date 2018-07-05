@@ -12,7 +12,6 @@ arguments:
 inputs:
     out_sam_filename:
         type: string
-        default: $(inputs.in1_fastq.nameroot).sam
 
     idxbase:
         type: File

@@ -9,8 +9,9 @@ baseCommand: java
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '-analysis_type', position: 4, valueFrom: 'IndelRealigner'}
+    - {prefix: '--analysis_type', position: 4, valueFrom: 'IndelRealigner'}
     - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
+    - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).IndelRealigner.bam}
 
 inputs:
     gatk_jar:
@@ -32,12 +33,6 @@ inputs:
         inputBinding:
             prefix: --input_file
             position: 5
-    out:
-        type: string
-        default: $(inputs.input.nameroot).IndelRealigner.bam
-        inputBinding:
-            prefix: --out
-            position: 5
     targetIntervals:
         type: File
         inputBinding:
@@ -54,4 +49,4 @@ outputs:
     output_bam:
         type: File
         outputBinding:
-            glob: $(inputs.out)
+            glob: $(inputs.input.nameroot).IndelRealigner.bam

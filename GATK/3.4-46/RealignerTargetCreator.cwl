@@ -11,6 +11,7 @@ arguments:
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
     - {prefix: '--analysis_type', position: 4, valueFrom: 'RealignerTargetCreator'}
     - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
+    - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).IndelRealigner.intervals }
 
 inputs:
     gatk_jar:
@@ -32,12 +33,6 @@ inputs:
         inputBinding:
             prefix: --input_file
             position: 5
-    out:
-        type: string
-        default: $(inputs.input.nameroot).IndelRealigner.intervals
-        inputBinding:
-            prefix: --out
-            position: 5
     known:
         type: File[]?
         inputBinding:
@@ -49,4 +44,4 @@ outputs:
     output_intervals:
         type: File
         outputBinding:
-            glob: $(inputs.out)
+            glob: $(inputs.input.nameroot).IndelRealigner.intervals

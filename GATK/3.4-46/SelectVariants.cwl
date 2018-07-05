@@ -1,15 +1,16 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-label: GATK HaplotypeCaller.
-doc: Call germline SNPs and indels via local re-assembly of haplotypes.
+label: GATK SelectVariants.
+doc: Select a subset of variants from a larger callset.
 
 baseCommand: java
 
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '--analysis_type', position: 4, valueFrom: 'HaplotypeCaller'}
+    - {prefix: '--analysis_type', position: 4, valueFrom: 'SelectVariants'}
+    - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
 
 inputs:
     gatk_jar:
@@ -25,40 +26,26 @@ inputs:
         inputBinding:
             prefix: --reference_sequence
             position: 5
-    input:
-        type: File[]
-        secondaryFiles:
-            - .bai
+    variant:
+        type: File
         inputBinding:
-            prefix: --input_file
+            prefix: --variant
             position: 5
     out:
         type: string
         inputBinding:
             prefix: --out
             position: 5
-    dbsnp:
-        type: File?
+    selectType:
+        type:
+            type: enum[]?
+            symbols: [INDEL, SNP, MIXED, MNP, SYMBOLIC, NO_VARIATION]
         inputBinding:
-            prefix: --dbsnp
+            prefix: -selectType
             position: 5
-    stand_call_conf:
-        type: int?
-        inputBinding:
-            prefix: --stand_call_conf
-            position: 5
-    stand_emit_conf:
-        type: int?
-        inputBinding:
-            prefix: --stand_emit_conf
-            position: 5
-    intervals:
-        type: File?
-        inputBinding:
-            prefix: --intervals
-            position: 5
+
 outputs:
     output_vcf:
         type: File
         outputBinding:
-            glob: $(inputs.output_vcf)
+            glob: $(inputs.out)
