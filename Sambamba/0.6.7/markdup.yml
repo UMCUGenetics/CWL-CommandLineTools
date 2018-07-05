@@ -1,3 +1,4 @@
 input:
-    class: File
-    path: []
+    - {class: File, path: }
+    - {class: File, path: }
+out_bam_filename: .markdup.bam
