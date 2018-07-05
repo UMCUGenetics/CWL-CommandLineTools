@@ -21,9 +21,6 @@ inputs:
 outputs:
     output_bam:
         type: File
+        secondaryFiles: .bai
         outputBinding:
             glob: $(inputs.input.nameroot).sorted.bam
-    output_bai:
-        type: File
-        outputBinding:
-            glob: $(inputs.input.nameroot).sorted.bam.bai
