@@ -3,7 +3,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 
 label: GATK RealignerTargetCreator.
-doc: Define intervals to target for local realignment
+doc: Define intervals to target for local realignment.
 
 baseCommand: java
 
@@ -29,6 +29,8 @@ inputs:
             position: 5
     input:
         type: File
+        secondaryFiles:
+            - .bai
         inputBinding:
             prefix: --input_file
             position: 5
