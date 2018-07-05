@@ -18,7 +18,7 @@ inputs:
 
 outputs:
     output:
-        type: stdout
+        type: File
         streamable: true
         outputBinding:
           glob: $(inputs.input.basename).bai
