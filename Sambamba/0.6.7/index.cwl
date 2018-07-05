@@ -1,7 +1,7 @@
 class: CommandLineTool
 cwlVersion: v1.0
 
-label: sambamba index, tool for indexing a BAM file.
+label: sambamba index, tool for building standard index files for BAM data.
 
 baseCommand: [sambamba, index]
 
