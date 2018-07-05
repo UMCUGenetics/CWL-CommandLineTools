@@ -7,6 +7,7 @@ baseCommand: [sambamba, index]
 
 arguments:
     - {prefix: '--nthreads', valueFrom: $(runtime.cores)}
+    - {position: 2, valueFrom: $(inputs.input.basename).bai}
 
 inputs:
     input:
