@@ -12,7 +12,6 @@ arguments:
 inputs:
     input:
         type: File
-        streamable: true
         inputBinding:
             position: 1
         doc: input.bam
@@ -20,6 +19,5 @@ inputs:
 outputs:
     output:
         type: File
-        streamable: true
         outputBinding:
           glob: $(inputs.input.basename).bai
