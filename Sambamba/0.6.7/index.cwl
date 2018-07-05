@@ -17,7 +17,7 @@ inputs:
         doc: input.bam
 
 outputs:
-    output:
+    output_bai:
         type: File
         outputBinding:
           glob: $(inputs.input.basename).bai

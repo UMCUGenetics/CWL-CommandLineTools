@@ -17,11 +17,11 @@ inputs:
             position: 1
 
 outputs:
-    zip_file:
+    output_zip:
         type: File
         outputBinding:
-            glob: $(inputs.fastq_file.basename).zip
-    html_file:
+            glob: $(inputs.fastq_file.nameroot).zip
+    output_html:
         type: File
         outputBinding:
-            glob: $(inputs.fastq_file.basename).html
+            glob: $(inputs.fastq_file.nameroot).html

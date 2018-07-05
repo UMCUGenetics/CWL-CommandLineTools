@@ -58,7 +58,7 @@ inputs:
             position: 5
 
 outputs:
-    output:
+    output_vcf:
         type: File
         outputBinding:
             glob: $(inputs.out)

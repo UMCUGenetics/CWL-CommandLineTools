@@ -19,11 +19,11 @@ inputs:
         doc: input.bam
 
 outputs:
-    bam_file:
+    output_bam:
         type: File
         outputBinding:
             glob: $(inputs.input.nameroot).sorted.bam
-    bai_file:
+    output_bai:
         type: File
         outputBinding:
             glob: $(inputs.input.nameroot).sorted.bam.bai

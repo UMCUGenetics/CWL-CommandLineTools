@@ -10,8 +10,10 @@ arguments:
     - {prefix: "-t", valueFrom: $(runtime.cores)}
 
 inputs:
-    out_sam_filename: string
-    
+    out_sam_filename:
+        type: string
+        default: $(inputs.in1_fastq.nameroot).sam
+
     idxbase:
         type: File
         inputBinding:
@@ -37,7 +39,7 @@ inputs:
         type: string?
         inputBinding:
             prefix: -R
-        doc: Read group header line such as '@RG\tID:foo\tSM:bar' [null].
+        doc: Read group header line such as '@RG\tID:foo\tSM:bar'.
 
     c:
         type: int?
@@ -49,9 +51,9 @@ inputs:
         type: boolean?
         inputBinding:
             prefix: -M
-        doc: Mark shorter split hits as secondary (for Picard/GATK compatibility)
+        doc: Mark shorter split hits as secondary (for Picard/GATK compatibility).
 
 outputs:
-    out_sam:
+    output_sam:
         type: stdout
         streamable: true

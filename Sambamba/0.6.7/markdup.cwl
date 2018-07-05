@@ -18,11 +18,11 @@ inputs:
         doc: input.bam files, multiple files are merged.
 
 outputs:
-    bam_file:
+    output_bam:
         type: File
         outputBinding:
             glob: $(inputs.out_bam_filename)
-    bai_file:
+    output_bai:
         type: File
         outputBinding:
             glob: $(inputs.out_bam_filename).bai

@@ -18,6 +18,6 @@ inputs:
         doc: input.bam
 
 outputs:
-    output:
+    output_flagstat:
         type: stdout
         streamable: true
