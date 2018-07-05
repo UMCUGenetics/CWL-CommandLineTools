@@ -20,8 +20,8 @@ outputs:
     zip_file:
         type: File
         outputBinding:
-            glob: '*_fastqc.zip'
+            glob: $(inputs.fastq_file.basename).zip
     html_file:
         type: File
         outputBinding:
-            glob: '*_fastqc.html'
+            glob: $(inputs.fastq_file.basename).html
