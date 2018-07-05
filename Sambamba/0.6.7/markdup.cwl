@@ -20,9 +20,10 @@ inputs:
 outputs:
     output_bam:
         type: File
+        secondaryFiles: .bai
         outputBinding:
             glob: $(inputs.out_bam_filename)
-    output_bai:
-        type: File
-        outputBinding:
-            glob: $(inputs.out_bam_filename).bai
+    # output_bai:
+    #     type: File
+    #     outputBinding:
+    #         glob: $(inputs.out_bam_filename).bai
