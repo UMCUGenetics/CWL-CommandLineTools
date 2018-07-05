@@ -4,10 +4,12 @@ cwlVersion: v1.0
 label: sambamba sort, tool for sorting a BAM file.
 
 baseCommand: [sambamba, sort]
-stdout: $(inputs.input.nameroot).sorted.bam
 
 arguments:
     - {prefix: '--nthreads', valueFrom: $(runtime.cores)}
+    - {prefix: '--memory-limit', valueFrom: $(runtime.ram)}
+    - {prefix: '--tmpdir', valueFrom: $(runtime.tmpdir)}
+    - {prefix: '--out', valueFrom: $(inputs.input.nameroot + '.sorted.bam') }
 
 inputs:
     input:
@@ -17,23 +19,12 @@ inputs:
             position: 1
         doc: input.bam
 
-    memory-limit:
-        type: string?
-        inputBinding:
-            prefix: --memory-limit
-
-    tmpdir:
-        type: string?
-        inputBinding:
-          prefix: --tmpdir
-
-    output_name:
-      type: string?
-      inputBinding:
-        prefix: '--out'
-        valueFrom: $(inputs.input.nameroot + '.sorted.bam')
-
 outputs:
-    output:
-        type: stdout
-        streamable: true
+    bam_file:
+        type: File
+        outputBinding:
+            glob: $(inputs.input.nameroot + '.sorted.bam')
+    bai_file:
+        type: File
+        outputBinding:
+            glob: $(inputs.input.nameroot + '.sorted.bam.bai')

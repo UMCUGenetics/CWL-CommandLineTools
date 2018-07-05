@@ -1,5 +1,3 @@
 input:
     class: File
     path: '/path/to/input.bam'
-memory-limit: 1G
-tmpdir: ./
