@@ -17,7 +17,7 @@ inputs:
             position: 1
         doc: input.bam
     out:
-        type: File
+        type: File?
         inputBinding:
             prefix: '--out'
             valueFrom: $(inputs.input.nameroot).sorted.bam
