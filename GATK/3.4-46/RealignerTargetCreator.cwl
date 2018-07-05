@@ -2,15 +2,16 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-label: GATK VariantFiltration.
+label: GATK RealignerTargetCreator.
+doc: Define intervals to target for local realignment
 
 baseCommand: java
 
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)MiB}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '-analysis_type', valueFrom: 'VariantFiltration', position: 4}
-    - {prefix: '-nt', valueFrom: $(runtime.cores), position: 5}
+    - {prefix: '-analysis_type', position: 4, valueFrom: 'RealignerTargetCreator'}
+    - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
 
 inputs:
     gatk_jar:
@@ -26,36 +27,23 @@ inputs:
         inputBinding:
             prefix: --reference_sequence
             position: 5
-    variant:
+    input:
         type: File
         inputBinding:
-            prefix: --variant
+            prefix: --input_file
             position: 5
     out:
         type: string
+        default: $(inputs.input.nameroot).IndelRealigner.intervals
         inputBinding:
             prefix: --out
             position: 5
-    filterExpression:
-        type: string
+    known:
+        type: File[]?
         inputBinding:
-            prefix: --filterExpression
+            prefix: --known
             position: 5
-    filterName:
-        type: string
-        inputBinding:
-            prefix: --filterName
-            position: 5
-    clusterSize:
-        type: int?
-        inputBinding:
-            prefix: --clusterSize
-            position: 5
-    clusterWindowSize:
-        type: int?
-        inputBinding:
-            prefix: --clusterWindowSize
-            position: 5
+        doc: Input VCF file(s) with known indels.
 
 outputs:
     output:
