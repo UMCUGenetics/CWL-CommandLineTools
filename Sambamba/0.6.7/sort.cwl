@@ -7,9 +7,9 @@ baseCommand: [sambamba, sort]
 
 arguments:
     - {prefix: '--nthreads', valueFrom: $(runtime.cores)}
-    - {prefix: '--memory-limit', valueFrom: $(runtime.ram)}
+    - {prefix: '--memory-limit', valueFrom: $(runtime.ram)MiB}
     - {prefix: '--tmpdir', valueFrom: $(runtime.tmpdir)}
-    - {prefix: '--out', valueFrom: $(inputs.input.nameroot + '.sorted.bam') }
+    - {prefix: '--out', valueFrom: $(inputs.input.nameroot).sorted.bam }
 
 inputs:
     input:
@@ -23,8 +23,8 @@ outputs:
     bam_file:
         type: File
         outputBinding:
-            glob: $(inputs.input.nameroot + '.sorted.bam')
+            glob: $(inputs.input.nameroot).sorted.bam
     bai_file:
         type: File
         outputBinding:
-            glob: $(inputs.input.nameroot + '.sorted.bam.bai')
+            glob: $(inputs.input.nameroot).sorted.bam.bai
