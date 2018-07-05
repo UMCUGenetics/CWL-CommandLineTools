@@ -46,7 +46,7 @@ inputs:
         doc: Input VCF file(s) with known indels.
 
 outputs:
-    output:
+    output_intervals:
         type: File
         outputBinding:
             glob: $(inputs.out)

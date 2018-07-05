@@ -2,16 +2,15 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-label: GATK IndelRealigner.
-doc: Perform local realignment of reads around indels.
+label: GATK HaplotypeCaller.
+doc: Call germline SNPs and indels via local re-assembly of haplotypes.
 
 baseCommand: java
 
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '-analysis_type', position: 4, valueFrom: 'IndelRealigner'}
-    - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
+    - {prefix: '--analysis_type', position: 4, valueFrom: 'HaplotypeCaller'}
 
 inputs:
     gatk_jar:
@@ -28,30 +27,37 @@ inputs:
             prefix: --reference_sequence
             position: 5
     input:
-        type: File
+        type: File[]
         inputBinding:
             prefix: --input_file
             position: 5
     out:
         type: string
-        default: $(inputs.input.nameroot).IndelRealigner.bam
         inputBinding:
             prefix: --out
             position: 5
-    targetIntervals:
-        type: File
+    dbsnp:
+        type: File?
         inputBinding:
-            prefix: --targetIntervals
+            prefix: --dbsnp
             position: 5
-    known:
-        type: File[]?
+    stand_call_conf:
+        type: int?
         inputBinding:
-            prefix: --known
+            prefix: --stand_call_conf
             position: 5
-        doc: Input VCF file(s) with known indels.
-
+    stand_emit_conf:
+        type: int?
+        inputBinding:
+            prefix: --stand_emit_conf
+            position: 5
+    intervals:
+        type: File?
+        inputBinding:
+            prefix: --intervals
+            position: 5
 outputs:
-    output_bam:
+    output_vcf:
         type: File
         outputBinding:
-            glob: $(inputs.out)
+            glob: $(inputs.output_vcf)
