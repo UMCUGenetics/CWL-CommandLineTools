@@ -37,9 +37,13 @@ inputs:
             prefix: --out
             position: 5
     selectType:
-        type: string[]
+        type:
+            - 'null'
+            - type: array
+              items: string
+              inputBinding:
+                prefix: -selectType
         inputBinding:
-            prefix: -selectType
             position: 5
 
 outputs:
