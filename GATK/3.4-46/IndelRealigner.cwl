@@ -48,5 +48,6 @@ inputs:
 outputs:
     output_bam:
         type: File
+        secondaryFiles: ^.bai
         outputBinding:
             glob: $(inputs.input.nameroot).IndelRealigner.bam

@@ -28,7 +28,7 @@ inputs:
     input:
         type: File[]
         secondaryFiles:
-            - .bai
+            - ^.bai
         inputBinding:
             prefix: --input_file
             position: 5
@@ -61,4 +61,4 @@ outputs:
     output_vcf:
         type: File
         outputBinding:
-            glob: $(inputs.output_vcf)
+            glob: $(inputs.out)

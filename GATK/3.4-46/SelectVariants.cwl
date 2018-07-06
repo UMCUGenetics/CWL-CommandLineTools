@@ -37,9 +37,7 @@ inputs:
             prefix: --out
             position: 5
     selectType:
-        type:
-            type: enum[]?
-            symbols: [INDEL, SNP, MIXED, MNP, SYMBOLIC, NO_VARIATION]
+        type: string[]
         inputBinding:
             prefix: -selectType
             position: 5
