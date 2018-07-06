@@ -1,16 +1,16 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-label: GATK VariantFiltration.
+label: GATK CombineVariants.
+doc: Combine variant records from different sources.
 
 baseCommand: java
-doc: Filter variant calls based on INFO and FORMAT annotations.
 
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '--analysis_type', valueFrom: 'VariantFiltration', position: 4}
-    - {prefix: '-nt', valueFrom: $(runtime.cores), position: 5}
+    - {prefix: '--analysis_type', position: 4, valueFrom: 'CombineVariants'}
+    - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
 
 inputs:
     gatk_jar:
@@ -27,34 +27,17 @@ inputs:
             prefix: --reference_sequence
             position: 5
     variant:
-        type: File
+        type:
+            type: array
+            items: File
+            inputBinding:
+                prefix: --variant
         inputBinding:
-            prefix: --variant
             position: 5
     out:
         type: string
         inputBinding:
             prefix: --out
-            position: 5
-    filterExpression:
-        type: string
-        inputBinding:
-            prefix: --filterExpression
-            position: 5
-    filterName:
-        type: string
-        inputBinding:
-            prefix: --filterName
-            position: 5
-    clusterSize:
-        type: int?
-        inputBinding:
-            prefix: --clusterSize
-            position: 5
-    clusterWindowSize:
-        type: int?
-        inputBinding:
-            prefix: --clusterWindowSize
             position: 5
 
 outputs:
