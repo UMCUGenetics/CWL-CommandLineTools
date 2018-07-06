@@ -37,14 +37,20 @@ inputs:
             prefix: --out
             position: 5
     filterExpression:
-        type: string
+        type:
+            type: array
+            items: string
+            inputBinding:
+                prefix: --filterExpression
         inputBinding:
-            prefix: --filterExpression
             position: 5
     filterName:
-        type: string
+        type:
+            type: array
+            items: string
+            inputBinding:
+                prefix: --filterName
         inputBinding:
-            prefix: --filterName
             position: 5
     clusterSize:
         type: int?
