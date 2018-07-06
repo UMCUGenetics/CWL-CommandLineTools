@@ -39,6 +39,11 @@ inputs:
         inputBinding:
             prefix: --out
             position: 5
+    assumeIdenticalSamples:
+        type: boolean?
+        inputBinding:
+            prefix: --assumeIdenticalSamples
+            position: 5
 
 outputs:
     output_vcf:
