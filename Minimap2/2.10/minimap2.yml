@@ -1,0 +1,7 @@
+target:
+  class: File
+  path:
+query:
+  class: File
+  path:
+a: true
