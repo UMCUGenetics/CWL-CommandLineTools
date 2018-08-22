@@ -1068,15 +1068,17 @@ inputs:
 
       For example: zcat - to uncompress .gz files, bzcat - to uncompress .bz2
       files, etc.
-  - id: readFilesIn
-    type: 'File[]'
+  - id: fastq1
+    type: File
     inputBinding:
       position: 1
-      prefix: '--readFilesIn'
-      loadContents: true
-    doc: >
-      string(s): paths to files that contain input read1 (and, if needed, 
-      read2)
+      prefix: --readFilesIn
+
+  - id: fastq2
+    type: File
+    inputBinding:
+      position: 2
+
   - id: readMapNumber
     type: int?
     inputBinding:
