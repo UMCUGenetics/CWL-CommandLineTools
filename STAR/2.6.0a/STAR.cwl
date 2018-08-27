@@ -1072,13 +1072,11 @@ inputs:
     type: File
     inputBinding:
       position: 1
-      prefix: --readFilesIn
-
+      prefix: '--readFilesIn'
   - id: fastq2
     type: File
     inputBinding:
       position: 2
-
   - id: readMapNumber
     type: int?
     inputBinding:
