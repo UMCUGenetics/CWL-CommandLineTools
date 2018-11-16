@@ -37,17 +37,17 @@ inputs:
       position: 11
       prefix: '-U'
   - id: rf
-    type: string
+    type: string?
     inputBinding:
       position: 8
       prefix: '-rf'
   - id: RMQF
-    type: int
+    type: int?
     inputBinding:
       position: 9
       prefix: '-RMQF'
   - id: RMQT
-    type: int
+    type: int?
     inputBinding:
       position: 10
       prefix: '-RMQT'

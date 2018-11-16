@@ -42,5 +42,3 @@ arguments:
     valueFrom: alignReads
 requirements:
   - class: ShellCommandRequirement
-  - class: DockerRequirement
-    dockerPull: 'scidap/star:v2.5.0b'

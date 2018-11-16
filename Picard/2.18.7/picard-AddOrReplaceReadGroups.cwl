@@ -99,6 +99,11 @@ inputs:
     inputBinding:
       position: 5
       prefix: CREATE_INDEX=
+  - id: jar
+    type: File?
+    inputBinding:
+      position: 2
+      prefix: '-jar'
 outputs:
   - id: out_bam
     type: File?
@@ -107,10 +112,10 @@ outputs:
 doc: CWL implementation of Picard's AddOrReplaceReadGroups subcomand
 label: picard-AddOrReplaceReadGroups
 arguments:
-  - position: 2
-    prefix: '-jar'
+  - position: 3
+    prefix: ''
     shellQuote: false
-    valueFrom: /Users/tschafers/jar/picard.jar AddOrReplaceReadGroups
+    valueFrom: AddOrReplaceReadGroups
 requirements:
   - class: ShellCommandRequirement
   - class: InlineJavascriptRequirement

@@ -177,6 +177,11 @@ inputs:
       position: 21
       prefix: TMP_DIR=
     doc: Default value null. This option may be specified 0 or more times.
+  - id: jar
+    type: File?
+    inputBinding:
+      position: 2
+      prefix: '-jar'
 outputs:
   - id: markDups_output
     type: File
@@ -187,10 +192,6 @@ outputs:
     outputBinding:
       glob: $("*.bai")
 arguments:
-  - position: 2
-    prefix: '-jar'
-    shellQuote: false
-    valueFrom: /Users/tschafers/jar/picard.jar
   - position: 4
     valueFrom: VALIDATION_STRINGENCY=SILENT
   - position: 3

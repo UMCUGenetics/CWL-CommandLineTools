@@ -19,7 +19,7 @@ inputs:
     secondaryFiles:
       - ^.bai
   - id: input_baseRecalibrator
-    type: File
+    type: File?
     inputBinding:
       position: 7
       prefix: '-BQSR'
