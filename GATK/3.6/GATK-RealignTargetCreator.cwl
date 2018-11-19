@@ -107,10 +107,6 @@ doc: |
     It accepts 3 input files and produces a file containing list of target intervals to pass to the IndelRealigner.
     Usage: java -jar GenomeAnalysisTK.jar -T RealignerTargetCreator -R reference.fasta -I input.bam --known indels.vcf -o forIndelRealigner.intervals.
 arguments:
-  - position: 2
-    prefix: '-Djava.io.tmpdir='
-    separate: false
-    valueFrom: ./test/test-files
   - position: 4
     prefix: '-T'
     valueFrom: RealignerTargetCreator
