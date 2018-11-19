@@ -88,7 +88,7 @@ inputs:
     id: threads
     type: int
     inputBinding:
-      position: -33
+      position: 17
       prefix: '-nt'
   - id: windowSize
     type: int?
