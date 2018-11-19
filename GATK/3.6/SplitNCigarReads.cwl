@@ -55,7 +55,7 @@ outputs:
   - id: bam_out
     type: File?
     outputBinding:
-      glob: $(inputs.output)
+      glob: $(inputs.OUTPUT)
 label: GATK-SplitNCigarReads
 arguments:
   - position: 3

@@ -136,11 +136,11 @@ inputs:
       position: 5
       prefix: '-R'
     secondaryFiles:
-      - .64.amb
-      - .64.ann
-      - .64.bwt
-      - .64.pac
-      - .64.sa
+      - .amb
+      - .ann
+      - .bwt
+      - .pac
+      - .sa
       - .fai
       - ^.dict
 outputs:
