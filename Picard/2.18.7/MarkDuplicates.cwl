@@ -10,11 +10,11 @@ arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
     - {position: 4, valueFrom: 'MarkDuplicates'}
-    - {prefix: 'VALIDATION_STRINGENCY=SILENT', position: 5}
-    - {prefix: 'CREATE_INDEX=true', position: 6}
+    - {prefix: 'VALIDATION_STRINGENCY=', separate: false, position: 5, valueFrom: 'SILENT'}
+    - {prefix: 'CREATE_INDEX=', position: 6, separate: false, valueFrom: 'true'}
     - {prefix: 'METRICS_FILE=',position: 7, separate: false, valueFrom: $(inputs.input.nameroot).metrics.txt}
     - {prefix: 'OUTPUT=',  position: 8, separate: false, valueFrom: $(inputs.input.nameroot).mdup.bam}
-    - {prefix: 'REMOVE_DUPLICATES=false', position: 9}
+    - {prefix: 'REMOVE_DUPLICATES=', position: 9, separate: false, valueFrom: 'true' }
 
 baseCommand: java
 

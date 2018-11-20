@@ -3,11 +3,9 @@ cwlVersion: v1.0
 
 label: survivor simSV
 
-baseCommand:
-  - SURVIVOR
-  - simSV
-inputs:
+baseCommand: [SURVIVOR, simSV]
 
+inputs:
     Parameter_file:
         type: File
         inputBinding:

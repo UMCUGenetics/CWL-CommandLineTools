@@ -5,7 +5,7 @@ arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
     - {position: 3, valueFrom: 'AddOrReplaceReadGroups'}
-    - {prefix: 'CREATE_INDEX=true', position: 4}
+    - {prefix: 'CREATE_INDEX=', position: 4, separate: false, valueFrom: 'true'}
     - {prefix: 'OUTPUT=',  position: 5, separate: false, valueFrom: $(inputs.input.nameroot).rg.bam}
 
 
