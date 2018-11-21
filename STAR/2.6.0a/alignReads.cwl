@@ -130,7 +130,7 @@ outputs:
     output:
         type: File
         outputBinding:
-          glob: $(inputs.outFileNamePrefix).bam
+          glob: $(inputs.outFileNamePrefix)Aligned.sortedByCoord.out.bam
         secondaryFiles:
           - .out
           - .tab

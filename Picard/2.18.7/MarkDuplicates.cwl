@@ -25,7 +25,7 @@ inputs:
           position: 3
           prefix: '-jar'
     input:
-      type: File[]
+      type: File
       inputBinding:
           position: 10
           prefix: INPUT=
@@ -40,5 +40,5 @@ outputs:
     markDups_output:
       type: File
       outputBinding:
-        glob: $(inputs.outputFileName_markDups)
+        glob:  $(inputs.input.nameroot).mdup.bam
       secondaryFiles: ^.bai
