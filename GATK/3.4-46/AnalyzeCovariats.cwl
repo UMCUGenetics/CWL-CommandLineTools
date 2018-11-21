@@ -1,8 +1,8 @@
 class: CommandLineTool
 cwlVersion: v1.0
 
-label: GATK BaseRecalibrator.
-doc:  GATK-BaseRecalibrator
+label: GATK-AnalyzeCovariats
+doc:  GATK-AnalyzeCovariats
 
 baseCommand: java
 

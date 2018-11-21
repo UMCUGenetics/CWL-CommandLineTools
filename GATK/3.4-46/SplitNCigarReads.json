@@ -1,0 +1,18 @@
+{
+    "RMQF": 255,
+    "RMQT": 60,
+    "gatk_jar": {
+        "class": "File",
+        "path": ""
+    },
+    "input": {
+        "class": "File",
+        "path": ""
+    },
+    "n_cigar": "ALLOW_N_CIGAR_READS",
+    "reference_sequence": {
+        "class": "File",
+        "path": ""
+    },
+    "rf": "ReassignOneMappingQuality"
+}

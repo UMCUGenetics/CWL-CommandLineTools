@@ -1,0 +1,24 @@
+{
+    "BQSR": {
+        "class": "File",
+        "path": ""
+    },
+    "gatk_jar": {
+        "class": "File",
+        "path": ""
+    },
+    "input": {
+        "class": "File",
+        "path": ""
+    },
+    "known": [
+        {
+            "class": "File",
+            "path": ""
+        }
+    ],
+    "reference_sequence": {
+        "class": "File",
+        "path": ""
+    }
+}
