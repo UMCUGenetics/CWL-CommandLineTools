@@ -1,0 +1,11 @@
+ReadGroupID: 
+ReadGroupLibrary: 
+ReadGroupPlatform: 
+ReadGroupPlatformUnit: 
+ReadGroupSampleName: 
+input:
+- class: File
+  path: ""
+picard_jar:
+  class: File
+  path: ""

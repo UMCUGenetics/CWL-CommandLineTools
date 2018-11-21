@@ -1,0 +1,9 @@
+input:
+  class: File
+  path: ""
+picard_jar:
+  class: File
+  path: ""
+tmpdir: 
+  class: File
+  path: ""
