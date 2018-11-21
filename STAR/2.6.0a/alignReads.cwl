@@ -4,7 +4,6 @@ cwlVersion: v1.0
 arguments:
     - {prefix: '--runMode ', position: 1, separate: false, valueFrom: 'alignReads'}
     - {prefix: '--outSAMtype ', position: 4, separate: false, valueFrom: 'BAM SortedByCoordinate'}
-    - {prefix: '--readFilesCommand ', position: 5, separate: false, valueFrom: 'zcat'}
     - {prefix: '--runThreadN ', position: 6, separate: false, valueFrom: $(runtime.cores)}
   
 label: STAR-alignReads
