@@ -6,7 +6,6 @@ arguments:
     - {prefix: '--outSAMtype ', position: 4, separate: false, valueFrom: 'BAM SortedByCoordinate'}
     - {prefix: '--readFilesCommand ', position: 5, separate: false, valueFrom: 'zcat'}
     - {prefix: '--runThreadN ', position: 6, separate: false, valueFrom: $(runtime.cores)}
-    - {prefix: '--outFileNamePrefix ', position: 7, separate: false, valueFrom: 'Aligned.sortedByCoord.out'}
   
 label: STAR-alignReads
 doc: align reads to transcriptome.
@@ -21,12 +20,12 @@ inputs:
             position: 2
             prefix: '--readFilesIn'
     fastq2:
-        type: File?
+        type: File
         inputBinding:
             position: 3
             prefix: ''
     genomeDir:
-        type: Directory?
+        type: Directory
         inputBinding:
             position: 8
             prefix: '--genomeDir'
@@ -120,6 +119,12 @@ inputs:
         inputBinding:
           position: 24
           prefix: '--twopassMode'
+    
+    outFileNamePrefix:
+        type: string
+        inputBinding:
+          position: 25
+          prefix: '--outFileNamePrefix'
     
 outputs:
     output:
