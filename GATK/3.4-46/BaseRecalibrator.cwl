@@ -20,7 +20,6 @@ inputs:
         inputBinding:
             position: 3
             prefix: '-jar'
-
     input:
         type: File
         inputBinding:
@@ -28,12 +27,12 @@ inputs:
             prefix: '-I'
         secondaryFiles:
           - ^.bai
-
     known:
         type: File[]
         inputBinding:
             prefix: '--knownSites'
             position: 28
+
     reference_sequence:
         type: File
         inputBinding:

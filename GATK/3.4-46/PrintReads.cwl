@@ -29,7 +29,7 @@ inputs:
           - ^.bai
 
     recall_table:
-        type: File?
+        type: File
         inputBinding:
             position: 7
             prefix: '-BQSR'

@@ -52,12 +52,9 @@ inputs:
             prefix: '-RMQT'
 
 
-
-
-    
 outputs:
      bam_out:
         type: File
         secondaryFiles: ^.bai
         outputBinding:
-          glob: $(inputs.output.nameroot).ncigar_split.bam
+          glob: $(inputs.input.nameroot).ncigar_split.bam

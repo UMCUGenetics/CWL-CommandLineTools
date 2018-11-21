@@ -20,6 +20,14 @@ inputs:
         inputBinding:
             position: 3
             prefix: '-jar'
+            
+    input:
+        type: File
+        secondaryFiles: .bai
+        inputBinding:
+            prefix: --input_file
+            position: 5
+            
     reference_sequence:
         type: File
         inputBinding:
