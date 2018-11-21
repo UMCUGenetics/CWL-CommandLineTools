@@ -124,6 +124,11 @@ inputs:
         inputBinding:
           position: 25
           prefix: '--outFileNamePrefix'
+    readFilesCommand:
+        type: string
+        inputBinding:
+          position:26
+          prefix: '--readFilesCommand'
     
 outputs:
     output:
