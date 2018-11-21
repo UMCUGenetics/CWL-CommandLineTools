@@ -1,0 +1,28 @@
+alignEndsType: 
+alignIntronMax: 
+chimJunctionOverhangMin: 
+chimSegmentMin: 
+clip3pAdapterMMp: 
+clip3pAdapterSeq: 
+clip5pNbases: 
+fastq1:
+  class: File
+  metadata: {}
+  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R1.chr6.fq"
+  secondaryFiles: []
+fastq2:
+  class: File
+  metadata: {}
+  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R2.chr6.fq"
+  secondaryFiles: []
+genomeDir:
+  class: Directory
+  path: "/Users/tschafers/Test_data/STAR/starIndex"
+outFileNamePrefix: Test
+outFilterMatchNminOverLread: 
+outFilterMismatchNmax: 
+outFilterMismatchNoverLmax: 
+outFilterMultimapNmax: 
+outFilterScoreMinOverLread: 
+outReadsUnmapped: 
+outSAMstrandField: 
