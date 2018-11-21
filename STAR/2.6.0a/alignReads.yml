@@ -8,12 +8,12 @@ clip5pNbases:
 fastq1:
   class: File
   metadata: {}
-  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R1.chr6.fq"
+  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R1.chr6.fq.gz"
   secondaryFiles: []
 fastq2:
   class: File
   metadata: {}
-  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R2.chr6.fq"
+  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R2.chr6.fq.gz"
   secondaryFiles: []
 genomeDir:
   class: Directory
@@ -26,3 +26,4 @@ outFilterMultimapNmax:
 outFilterScoreMinOverLread: 
 outReadsUnmapped: 
 outSAMstrandField: 
+readFilesCommand: "bzip2 -c"

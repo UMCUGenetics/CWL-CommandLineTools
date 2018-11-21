@@ -127,7 +127,7 @@ inputs:
     readFilesCommand:
         type: string
         inputBinding:
-          position:26
+          position: 26
           prefix: '--readFilesCommand'
     
 outputs:
