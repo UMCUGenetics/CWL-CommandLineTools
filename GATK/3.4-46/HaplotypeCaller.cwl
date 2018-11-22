@@ -27,7 +27,7 @@ inputs:
             position: 5
     input:
         type: File[]
-        secondaryFiles: .bai
+        secondaryFiles: ^.bai
         inputBinding:
             prefix: --input_file
             position: 5
