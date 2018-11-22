@@ -1,6 +1,6 @@
 input:
   class: File
-  path: ../../../../TEST_DATA/chr6_paired/chr6.sorted.bam
+  path: ../../../../TEST_DATA/chr6_paired/TestAligned.sortedByCoord.out.bam
 picard_jar:
   class: File
   path: /home/cog/tschafers/picard.jar

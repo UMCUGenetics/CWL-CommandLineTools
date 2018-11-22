@@ -5,7 +5,7 @@ ReadGroupPlatformUnit: PLU
 ReadGroupSampleName: Sample1 
 input:
   class: File
-  path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/chr6.sorted.mdup.bam  
+  path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/chr6_paired/TestAligned.sortedByCoord.out.mdup.bam  
 picard_jar:
   class: File
   path: /home/cog/tschafers/picard.jar

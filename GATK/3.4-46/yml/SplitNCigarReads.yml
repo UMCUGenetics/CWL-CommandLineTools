@@ -2,12 +2,12 @@ RMQF: 255
 RMQT: 60
 gatk_jar:
   class: File
-  path: ''
-input:
-  class: File
-  path: ''
-n_cigar: ALLOW_N_CIGAR_READS
+  path: /hpc/cog_bioinf/common_scripts/GenomeAnalysisTK-3.4-0/GenomeAnalysisTK.jar
 reference_sequence:
   class: File
-  path: ''
+  path: /hpc/cog_bioinf/GENOMES/Homo_sapiens.GRCh37.GATK.illumina/Homo_sapiens.GRCh37.GATK.illumina.fasta
+n_cigar: ALLOW_N_CIGAR_READS
+input:
+  class: File
+  path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/chr6_paired/TestAligned_rg.bam
 rf: ReassignOneMappingQuality

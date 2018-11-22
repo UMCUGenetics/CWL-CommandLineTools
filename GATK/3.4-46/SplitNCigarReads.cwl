@@ -19,14 +19,18 @@ inputs:
         inputBinding:
             position: 2
             prefix: '-jar'
-    
     reference_sequence:
         type: File
+        secondaryFiles:
+            - .fai
+            - ^.dict
         inputBinding:
-            position: 4
-            prefix: '-R'
+            prefix: --reference_sequence
+            position: 5
     input:
         type: File
+        secondaryFiles:
+            - .bai
         inputBinding:
             position: 5
             prefix: '-I'

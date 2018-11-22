@@ -10,5 +10,5 @@
 #$ -M t.schafers@umcutrecht.nl
 #$ -m beas
 
-/hpc/cog_bioinf/ridder/users/tschafers/miniconda3/envs/rnaseq/bin/cwltool --no-container  ../AddOrReplaceReadGroups.cwl ../yml/AddOrReplaceReadGroups.yml
 /hpc/cog_bioinf/ridder/users/tschafers/miniconda3/envs/rnaseq/bin/cwltool --no-container  ../MarkDuplicates.cwl ../yml/MarkDuplicates.yml
+/hpc/cog_bioinf/ridder/users/tschafers/miniconda3/envs/rnaseq/bin/cwltool --no-container  ../AddOrReplaceReadGroups.cwl ../yml/AddOrReplaceReadGroups.yml
