@@ -29,7 +29,7 @@ inputs:
             position: 5
     input:
         type: File
-        secondaryFiles: $(inputs.input.nameroot).bai
+        secondaryFiles: ^.bai
         inputBinding:
             prefix: --input_file
             position: 5

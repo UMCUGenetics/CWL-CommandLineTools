@@ -9,4 +9,4 @@ input:
     path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/chr6_paired/TestAligned_rg.ncigar_split.bam
 targetIntervals:
     class: File
-    path: <from RealignerTargetCreator>
+    path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/chr6_paired/TestAligned_rg.ncigar_split.IndelRealigner.intervals
