@@ -10,7 +10,7 @@ baseCommand: java
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '--analysis_type', position: 4, valueFrom: 'BaseReaclibrator'}
+    - {prefix: '--analysis_type', position: 4, valueFrom: 'BaseRecalibrator'}
     - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
     - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).recall.table}
 
@@ -22,14 +22,18 @@ inputs:
             prefix: '-jar'
     input:
         type: File
-         secondaryFiles: ^.bai
+        secondaryFiles: ^.bai
         inputBinding:
             position: 6
             prefix: '-I'
+        
        
     known:
-        type: File[]
+        type:   
+            type: array
+            items: File    
         inputBinding:
+            separate: false
             prefix: '--knownSites'
             position: 28
 

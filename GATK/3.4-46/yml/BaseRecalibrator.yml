@@ -1,15 +1,16 @@
-BQSR:
-  class: File
-  path: ''
 gatk_jar:
   class: File
-  path: ''
+  path: /hpc/cog_bioinf/common_scripts/GenomeAnalysisTK-3.4-0/GenomeAnalysisTK.jar
 input:
   class: File
-  path: ''
-known:
-- class: File
-  path: ''
+  path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/TestAligned_rg.ncigar_split.IndelRealigner.bam
+
+"known": [
+        {"class": "File", "path": "/hpc/cog_bioinf/common_dbs/GATK_bundle/1000G_phase1.indels.b37.vcf"}
+]
+
+
+
 reference_sequence:
   class: File
-  path: ''
+  path: /hpc/cog_bioinf/GENOMES/Homo_sapiens.GRCh37.GATK.illumina/Homo_sapiens.GRCh37.GATK.illumina.fasta
