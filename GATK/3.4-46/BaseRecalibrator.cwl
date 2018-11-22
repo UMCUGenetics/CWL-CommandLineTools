@@ -22,11 +22,11 @@ inputs:
             prefix: '-jar'
     input:
         type: File
+         secondaryFiles: .bai
         inputBinding:
             position: 6
             prefix: '-I'
-        secondaryFiles:
-          - ^.bai
+       
     known:
         type: File[]
         inputBinding:

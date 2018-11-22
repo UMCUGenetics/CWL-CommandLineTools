@@ -22,11 +22,11 @@ inputs:
 
     input:
         type: File
+        secondaryFiles: .bai
         inputBinding:
             position: 6
             prefix: '-I'
-        secondaryFiles:
-          - ^.bai
+    
 
     recall_table:
         type: File
