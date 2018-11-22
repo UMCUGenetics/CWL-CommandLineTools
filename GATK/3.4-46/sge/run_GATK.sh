@@ -10,4 +10,5 @@
 #$ -M t.schafers@umcutrecht.nl
 #$ -m beas
 
-/hpc/cog_bioinf/ridder/users/tschafers/miniconda3/envs/rnaseq/bin/cwltool --no-container ../SplitNCigarReads.cwl ../yml/SplitNCigarReads.yml
+#/hpc/cog_bioinf/ridder/users/tschafers/miniconda3/envs/rnaseq/bin/cwltool --no-container ../SplitNCigarReads.cwl ../yml/SplitNCigarReads.yml
+/hpc/cog_bioinf/ridder/users/tschafers/miniconda3/envs/rnaseq/bin/cwltool --no-container ../RealignerTargetCreator.cwl ../yml/RealignerTargetCreator.yml
