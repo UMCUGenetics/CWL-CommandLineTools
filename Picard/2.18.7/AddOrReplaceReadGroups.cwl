@@ -4,9 +4,9 @@ cwlVersion: v1.0
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {position: 3, valueFrom: 'AddOrReplaceReadGroups'}
-    - {prefix: 'CREATE_INDEX=', position: 4, separate: false, valueFrom: 'true'}
-    - {prefix: 'OUTPUT=',  position: 5, separate: false, valueFrom: $(inputs.input.nameroot).rg.bam}
+    - {position: 4, valueFrom: 'AddOrReplaceReadGroups'}
+    - {prefix: 'CREATE_INDEX=', position: 5, separate: false, valueFrom: 'true'}
+    - {prefix: 'OUTPUT=',  position: 6, separate: false, valueFrom: $(inputs.input.nameroot).rg.bam}
 
 
 baseCommand: java
@@ -16,11 +16,11 @@ inputs:
     picard_jar:
         type: File?
         inputBinding:
-          position: 6
+          position: 3
           prefix: '-jar'
 
     input:
-        type: File[]
+        type: File
         inputBinding:
           position: 7
           prefix: INPUT=

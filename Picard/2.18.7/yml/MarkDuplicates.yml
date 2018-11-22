@@ -1,9 +1,9 @@
 input:
   class: File
-  path: ""
+  path: ../../../../TEST_DATA/chr6_paired/chr6.sorted.bam
 picard_jar:
   class: File
-  path: ""
+  path: /home/cog/tschafers/picard.jar
 tmpdir: 
-  class: File
-  path: ""
+  class: Directory
+  path: /tmp/tschafers  

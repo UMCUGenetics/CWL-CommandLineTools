@@ -31,7 +31,7 @@ inputs:
           prefix: INPUT=
  
     tmpdir:
-      type: string?
+      type: Directory?
       inputBinding:
           position: 11
           prefix: TMP_DIR=

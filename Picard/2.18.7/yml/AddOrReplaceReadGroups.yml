@@ -1,11 +1,11 @@
-ReadGroupID: 
-ReadGroupLibrary: 
-ReadGroupPlatform: 
-ReadGroupPlatformUnit: 
-ReadGroupSampleName: 
+ReadGroupID: myID
+ReadGroupLibrary: RNAseq  
+ReadGroupPlatform: Illumina 
+ReadGroupPlatformUnit: PLU 
+ReadGroupSampleName: Sample1 
 input:
-- class: File
-  path: ""
+  class: File
+  path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/TEST_DATA/chr6.sorted.mdup.bam  
 picard_jar:
   class: File
-  path: ""
+  path: /home/cog/tschafers/picard.jar

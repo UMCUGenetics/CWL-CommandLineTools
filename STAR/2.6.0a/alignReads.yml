@@ -7,17 +7,13 @@ clip3pAdapterSeq:
 clip5pNbases: 
 fastq1:
   class: File
-  metadata: {}
-  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R1.chr6.fq.gz"
-  secondaryFiles: []
+  path: ../../../TEST_DATA/chr6_paired/R1.chr6.fq
 fastq2:
   class: File
-  metadata: {}
-  path: "/Users/tschafers/Test_data/STAR/fastq/chr6_paired/R2.chr6.fq.gz"
-  secondaryFiles: []
+  path: ../../../TEST_DATA/chr6_paired/R2.chr6.fq
 genomeDir:
   class: Directory
-  path: "/Users/tschafers/Test_data/STAR/starIndex"
+  path: /hpc/cog_bioinf/GENOMES/STAR/Homo_sapiens.GRCh37
 outFileNamePrefix: Test
 outFilterMatchNminOverLread: 
 outFilterMismatchNmax: 
@@ -26,4 +22,4 @@ outFilterMultimapNmax:
 outFilterScoreMinOverLread: 
 outReadsUnmapped: 
 outSAMstrandField: 
-readFilesCommand: "bzip2 -c"
+readFilesCommand:
