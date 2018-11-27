@@ -61,3 +61,5 @@ outputs:
         type: File?
         outputBinding:
           glob: $(inputs.input.nameroot).rg.bam
+        secondaryFiles: ^.bai
+          
