@@ -26,9 +26,7 @@ inputs:
             position: 6
             prefix: '-I'
     known:
-        type:   
-            type: array
-            items: File?
+        type: File[]?   
         inputBinding:
             separate: false
             prefix: '--knownSites'
