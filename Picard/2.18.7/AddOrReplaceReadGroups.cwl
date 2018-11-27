@@ -14,7 +14,7 @@ baseCommand: java
 
 inputs:
     picard_jar:
-        type: File?
+        type: File
         inputBinding:
           position: 3
           prefix: '-jar'
@@ -58,7 +58,7 @@ inputs:
 
 outputs:
     out_bam:
-        type: File?
+        type: File
         outputBinding:
           glob: $(inputs.input.nameroot).rg.bam
         secondaryFiles: ^.bai

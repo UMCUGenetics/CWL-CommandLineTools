@@ -14,12 +14,12 @@ baseCommand: STAR
 
 inputs:
     fastq1:
-        type: File?
+        type: File
         inputBinding:
             position: 2
             prefix: '--readFilesIn'
     fastq2:
-        type: File
+        type: File?
         inputBinding:
             position: 3
             prefix: ''

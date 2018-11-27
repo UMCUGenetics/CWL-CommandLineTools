@@ -57,7 +57,7 @@ inputs:
 
 outputs:
   output_analyze_covariates:
-        type: File?
+        type: File
         outputBinding:
             glob: recallQC.BQSR.pdf
         secondaryFiles:
