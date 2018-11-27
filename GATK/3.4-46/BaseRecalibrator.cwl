@@ -12,7 +12,6 @@ arguments:
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
     - {prefix: '--analysis_type', position: 4, valueFrom: 'BaseRecalibrator'}
     - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
-    - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).recall.table}
 
 inputs:
     gatk_jar:
@@ -26,12 +25,8 @@ inputs:
         inputBinding:
             position: 6
             prefix: '-I'
-        
-       
     known:
-        type:   
-            type: array
-            items: File    
+        type: File[]?
         inputBinding:
             separate: false
             prefix: '--knownSites'
@@ -53,9 +48,13 @@ inputs:
     BQSR:
         type: File?
         inputBinding:
-            position: 29
+            position: 6
             prefix: '-BQSR'
-
+    out_table:
+        type: string
+        inputBinding:
+            position: 7
+            prefix: '--out'
 
 
 
