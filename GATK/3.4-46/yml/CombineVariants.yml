@@ -1,0 +1,14 @@
+assumeIdenticalSamples: false
+gatk_jar:
+  class: File
+  path: ''
+out: combined.vcf
+reference_sequence:
+  class: File
+  path: ''
+variant:
+- class: File
+  path: ''
+- class: File
+  path: ''
+

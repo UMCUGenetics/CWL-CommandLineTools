@@ -1,9 +1,0 @@
-gatk_jar:
-    class: File
-    path:
-reference_sequence:
-    class: File
-    path:
-input:
-    class: File
-    path:

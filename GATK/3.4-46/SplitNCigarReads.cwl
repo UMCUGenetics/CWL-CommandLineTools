@@ -1,24 +1,24 @@
-cwlVersion: v1.0
 class: CommandLineTool
+cwlVersion: v1.0
 
-label: GATK IndelRealigner.
-doc: Perform local realignment of reads around indels.
+label: GATK SplitNCigarReads
+doc: Documentation  
 
 baseCommand: java
 
 arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
-    - {prefix: '--analysis_type', position: 4, valueFrom: 'IndelRealigner'}
+    - {prefix: '--analysis_type', position: 4, valueFrom: 'SplitNCigarReads'}
     - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
-    - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).IndelRealigner.bam}
+    - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).ncigar_split.bam}
 
 inputs:
     gatk_jar:
         type: File
         inputBinding:
-            prefix: -jar
-            position: 3
+            position: 2
+            prefix: '-jar'
     reference_sequence:
         type: File
         secondaryFiles:
@@ -31,23 +31,33 @@ inputs:
         type: File
         secondaryFiles: ^.bai
         inputBinding:
-            prefix: --input_file
             position: 5
-    targetIntervals:
-        type: File
+            prefix: '-I'
+    n_cigar:
+        type: string
         inputBinding:
-            prefix: --targetIntervals
-            position: 5
-    known:
-        type: File[]?
+            position: 11
+            prefix: '-U'
+    rf:
+        type: string?
         inputBinding:
-            prefix: --known
-            position: 5
-        doc: Input VCF file(s) with known indels.
+            position: 8
+            prefix: '-rf'
+    RMQF:
+        type: int?
+        inputBinding:
+            position: 9
+            prefix: '-RMQF'
+    RMQT:
+        type: int?
+        inputBinding:
+            position: 10
+            prefix: '-RMQT'
+
 
 outputs:
-    output_bam:
+     bam_out:
         type: File
         secondaryFiles: ^.bai
         outputBinding:
-            glob: $(inputs.input.nameroot).IndelRealigner.bam
+          glob: $(inputs.input.nameroot).ncigar_split.bam
