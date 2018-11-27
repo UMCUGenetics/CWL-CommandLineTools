@@ -14,7 +14,7 @@ baseCommand: java
 
 inputs:
     picard_jar:
-        type: File?
+        type: File
         inputBinding:
           position: 3
           prefix: '-jar'

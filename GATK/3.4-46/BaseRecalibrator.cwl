@@ -31,7 +31,7 @@ inputs:
     known:
         type:   
             type: array
-            items: File    
+            items: File?
         inputBinding:
             separate: false
             prefix: '--knownSites'
