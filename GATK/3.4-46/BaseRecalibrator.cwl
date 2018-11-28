@@ -50,7 +50,7 @@ inputs:
         inputBinding:
             position: 6
             prefix: '-BQSR'
-    out_table:
+    out_table_prefix:
         type: string
         inputBinding:
             position: 7
@@ -63,4 +63,4 @@ outputs:
     output_baseRecalibrator:
         type: File
         outputBinding:
-          glob: $(inputs.input.nameroot).recall.table
+          glob: $(inputs.out_table_prefix).recall.table
