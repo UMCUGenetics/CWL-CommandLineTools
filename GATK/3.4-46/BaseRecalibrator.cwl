@@ -12,7 +12,7 @@ arguments:
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
     - {prefix: '--analysis_type', position: 4, valueFrom: 'BaseRecalibrator'}
     - {prefix: '-nt', position: 5, valueFrom: $(runtime.cores)}
-    - {prefix: '-out', position: 5, valueFrom: $(inputs.input.nameroot).recall.table}
+    - {prefix: '--out', position: 5, valueFrom: $(inputs.input.nameroot).recall.table}
 
 
 inputs:
