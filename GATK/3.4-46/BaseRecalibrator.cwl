@@ -54,7 +54,7 @@ inputs:
             prefix: '-BQSR'
   
 outputs:
-    output_baseRecalibrator:
+    recall_table:
         type: File
         outputBinding:
           glob: $(inputs.input.nameroot).recall.table
