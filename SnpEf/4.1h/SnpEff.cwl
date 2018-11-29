@@ -45,7 +45,7 @@ inputs:
         type: boolean
         inputBinding:
             position: 7
-            prefix: '-lo'
+            prefix: '-lof'
     no-downstream:
         type: boolean
         inputBinding:
