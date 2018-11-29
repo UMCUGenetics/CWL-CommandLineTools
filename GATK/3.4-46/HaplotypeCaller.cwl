@@ -57,7 +57,7 @@ inputs:
             prefix: --intervals
             position: 5
     dont_use_softclipped_bases:
-        type: boolean
+        type: boolean?
         inputBinding:
             prefix: --dontUseSoftClippedBases
             position: 5
