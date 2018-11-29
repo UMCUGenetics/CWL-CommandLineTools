@@ -1,8 +1,8 @@
 class: CommandLineTool
 cwlVersion: v1.0
 
-label: GATK-AnalyzeCovariats
-doc:  GATK-AnalyzeCovariats
+label: SnpEff
+doc:  SnpEff
 
 baseCommand: java
 stdout: $(inputs.vcf.nameroot).snpeff.vcf
