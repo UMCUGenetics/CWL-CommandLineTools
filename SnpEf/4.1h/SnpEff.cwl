@@ -44,22 +44,22 @@ inputs:
     lof:
         type: boolean
         inputBinding:
-            position: 7
+            position: 8
             prefix: '-lof'
     no-downstream:
         type: boolean
         inputBinding:
-            position: 7
+            position: 9
             prefix: '-no-downstream'
     no-upstream:
         type: boolean
         inputBinding:
-            position: 7
+            position: 10
             prefix: '-no-upstream'
     no-intergenic:
         type: boolean
         inputBinding:
-            position: 7
+            position: 11
             prefix: '-no-intergenic'
     
 outputs:
