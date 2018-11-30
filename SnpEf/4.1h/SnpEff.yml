@@ -3,7 +3,7 @@ snpeff_jar:
   path: /hpc/cog_bioinf/common_scripts/snpEff_v4.1h/snpEff.jar
 config:
   class: File
-  path:  /hpc/cog_bioinf/common_scripts/snpEff_v4.1h/snpEff.config
+  path: /hpc/cog_bioinf/common_scripts/snpEff_v4.1h/snpEff.config
 database: GRCh37.74
 vcf:
   class: File
