@@ -31,7 +31,7 @@ inputs:
         inputBinding:
             prefix: --input_file
             position: 5
-    out:
+    output:
         type: string
         inputBinding:
             prefix: --out
