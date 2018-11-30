@@ -26,7 +26,7 @@ inputs:
             prefix: '-c'
 
     database:
-        type: File
+        type: string
         inputBinding:
             position: 5
       

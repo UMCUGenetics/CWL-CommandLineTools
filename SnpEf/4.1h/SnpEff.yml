@@ -1,0 +1,15 @@
+snpeff_jar:
+  class: File
+  path: /hpc/local/CentOS7/cog_bioinf/snpEff_v4.1h/snpEff.jar
+config:
+  class: File
+  path: /hpc/cog_bioinf/common_scripts/snpEff/snpEff.config
+database: GRCh37.74
+vcf:
+  class: File
+  path: /hpc/cog_bioinf/common_scripts/GenomeAnalysisTK-3.4-0/GenomeAnalysisTK.jar
+hgvs: true
+lof: true
+no-downstream: true
+no-upstream: true
+no-intergenic: true
