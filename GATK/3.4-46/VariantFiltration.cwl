@@ -10,7 +10,6 @@ arguments:
     - {prefix: '-Xmx', position: 1, separate: false, valueFrom: $(runtime.ram)M}
     - {prefix: '-Djava.io.tmpdir=', position: 2, separate: false, valueFrom: $(runtime.tmpdir)}
     - {prefix: '--analysis_type', valueFrom: 'VariantFiltration', position: 4}
-    - {prefix: '-nt', valueFrom: $(runtime.cores), position: 5}
 
 inputs:
     gatk_jar:
