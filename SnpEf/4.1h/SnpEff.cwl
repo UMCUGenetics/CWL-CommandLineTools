@@ -70,7 +70,7 @@ outputs:
         type: File
         outputBinding:
             glob: "*.html"
-     genes:
+    genes:
         type: File
         outputBinding:
             glob: "*.txt"
