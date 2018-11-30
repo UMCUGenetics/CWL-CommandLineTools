@@ -1,13 +1,13 @@
 snpeff_jar:
   class: File
-  path: /hpc/local/CentOS7/cog_bioinf/snpEff_v4.1h/snpEff.jar
+  path: /hpc/cog_bioinf/common_scripts/snpEff_v4.1h/snpEff.jar
 config:
   class: File
-  path: /hpc/cog_bioinf/common_scripts/snpEff/snpEff.config
+  path:  /hpc/cog_bioinf/common_scripts/snpEff_v4.1h/snpEff.config
 database: GRCh37.74
 vcf:
   class: File
-  path: /hpc/cog_bioinf/common_scripts/GenomeAnalysisTK-3.4-0/GenomeAnalysisTK.jar
+  path: /hpc/cog_bioinf/ridder/users/tschafers/CWL_TESTING/RNASeq-CWL/submodules/GATK_variant_calling-2018-11-30-133530.404/root/gatk_combine_variants/Test.filtered_variants.vcf
 hgvs: true
 lof: true
 no-downstream: true
