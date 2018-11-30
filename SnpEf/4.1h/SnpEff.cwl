@@ -66,3 +66,11 @@ outputs:
     output_snpeff:
         type: stdout
         streamable: true
+    stats:
+        type: File
+        outputBinding:
+            glob: "*.html"
+     genes:
+        type: File
+        outputBinding:
+            glob: "*.txt"
