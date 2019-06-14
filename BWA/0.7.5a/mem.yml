@@ -10,3 +10,4 @@ in2_fastq:
 read_group:
 c: 100
 m: true
+out_sam_filename: 
