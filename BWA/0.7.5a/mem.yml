@@ -7,7 +7,4 @@ in1_fastq:
 in2_fastq:
     class: File
     path:
-read_group:
-c: 100
-m: true
 out_sam_filename: 
