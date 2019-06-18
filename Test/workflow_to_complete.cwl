@@ -1,4 +1,4 @@
-class: #Add missing CWL class.
+class: Workflow
 cwlVersion: v1.0
 label: RNAseq pre-processing workflow. 
 
@@ -7,9 +7,10 @@ requirements:
     - class: InlineJavascriptRequirement
 
 inputs:
-    #Add missing inputs here
+    #Add missing input arguments
+
     idxbase: 
-        type: #Add missing data type.
+        type: File
         secondaryFiles:
             - .amb
             - .ann
@@ -25,23 +26,23 @@ inputs:
             symbols: [sam, bam, cram, json]
 
 outputs:
-   #Add missing output for bwa mem.
-    bam_file:
+    sam_file:
         type: File
-        outputSource: sambamba_view/output
+        outputSource: bwa_mem/output_sam
+    #Add missing output sink for bwa mem
 
 steps:
-    bwa_mem:
-        run: mem.cwl
-        in:
-            idxbase: idxbase
-            in1_fastq: in1_fastq
-            in2_fastq: in2_fastq
-            out_sam_filename: out_sam_filename
-        out: [output_sam]
+    #Add missing step for bwa mem
        
     sambamba_view:
-        #Add missing step for sambamba. 
+        run: view.cwl
+        in:
+            input: bwa_mem/output_sam
+            sam-input: sam-input
+            output_format: output_format
+        out: 
+            [output]
+
 
 
 
